@@ -19,16 +19,54 @@
         width: 100%;
 
         & li {
+          position: relative;
           width: calc((100% / 3) - 10px);
+          margin-bottom: 5px;
 
           & a img {
             width: 100%;
             height: auto;
           }
+
+          // &:hover a img {
+          //   // transform: scale(1.2);
+          //   overflow: hidden;
+          // }
+
+          &:hover .link_hover {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.4);
+          }
         }
 
         & li:not(:nth-child(3n+3)) {
           margin-right: 10px;
+        }
+
+        & .link_hover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 5px);
+          display: none;
+          flex-direction: column;
+          text-align: center;
+          justify-content: space-around;
+          overflow: hidden;
+
+          & h5 {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #ffffff;
+          }
+
+          & img {
+            filter: invert(1);
+            height: auto;
+            margin: 0 auto;
+            width: 30px;
+          }
         }
       }
     }

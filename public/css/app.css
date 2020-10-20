@@ -83,7 +83,9 @@ a {
 }
 
 .main_cont .container .pasta_link_desc .pasta_img_list li {
+  position: relative;
   width: calc((100% / 3) - 10px);
+  margin-bottom: 5px;
 }
 
 .main_cont .container .pasta_link_desc .pasta_img_list li a img {
@@ -91,12 +93,43 @@ a {
   height: auto;
 }
 
+.main_cont .container .pasta_link_desc .pasta_img_list li:hover .link_hover {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .main_cont .container .pasta_link_desc .pasta_img_list li:not(:nth-child(3n+3)) {
   margin-right: 10px;
 }
 
+.main_cont .container .pasta_link_desc .pasta_img_list .link_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 5px);
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.main_cont .container .pasta_link_desc .pasta_img_list .link_hover h5 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.main_cont .container .pasta_link_desc .pasta_img_list .link_hover img {
+  filter: invert(1);
+  height: auto;
+  margin: 0 auto;
+  width: 30px;
+}
+
 .footer_cont {
-  padding: 100px 0;
+  padding: 120px 0;
   background-image: url("/images/footer-montagne-bottom.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
