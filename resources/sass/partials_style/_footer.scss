@@ -1,0 +1,40 @@
+.footer_cont {
+  padding: 100px 0;
+  background-image: url('/images/footer-montagne-bottom.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  & .container {
+
+    & [class*="col_footer"] {
+      color: $color_grey;
+
+      & h3{
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      & a {
+        color: $color_grey;
+      }
+
+      & ul {
+        margin: 20px 0;
+        font-size: 18px;
+
+        & li:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    & .frs_col_footer {
+      width: 370px;
+      margin-right: 70px;
+    }
+
+    & .trd_col_footer {
+      margin-left: auto;
+    }
+  }
+}

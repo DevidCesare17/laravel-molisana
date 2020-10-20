@@ -1,7 +1,6 @@
 @import "partials_style/_variables.scss";
+@import "partials_style/_mixins.scss";
 @import "partials_style/_commons.scss";
 @import "partials_style/_header.scss";
-
-body{
-  background-color: red;
-}
+@import "partials_style/_main.scss";
+@import "partials_style/_footer.scss";

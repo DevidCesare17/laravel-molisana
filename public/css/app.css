@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.d_flex {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header_cont {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.header_cont .nav_list_head {
+  margin-top: 60px;
+}
+
+.header_cont .nav_list_head .pagelist_head {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.header_cont .nav_list_head .pagelist_head li {
+  display: inline;
+}
+
+.header_cont .nav_list_head .pagelist_head li :focus {
+  background-color: #B3E5FC;
+}
+
+.header_cont .nav_list_head .pagelist_head li a {
+  color: #000000;
+  padding: 20px 10px;
+}
+
+.header_cont .nav_list_head .pagelist_head li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.main_cont {
+  margin-top: 20px;
+  background-image: url("/images/fondo-pag-speciali.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main_cont .container {
+  padding: 85px 0;
+}
+
+.main_cont .container h2 {
+  font-size: 40px;
+  color: #033074;
+  margin: 20px 0;
+}
+
+.main_cont .container .pasta_link_desc .pasta_img_list {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.main_cont .container .pasta_link_desc .pasta_img_list li {
+  width: calc((100% / 3) - 10px);
+}
+
+.main_cont .container .pasta_link_desc .pasta_img_list li a img {
+  width: 100%;
+  height: auto;
+}
+
+.main_cont .container .pasta_link_desc .pasta_img_list li:not(:nth-child(3n+3)) {
+  margin-right: 10px;
+}
+
+.footer_cont {
+  padding: 100px 0;
+  background-image: url("/images/footer-montagne-bottom.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.footer_cont .container [class*=col_footer] {
+  color: #848D9B;
+}
+
+.footer_cont .container [class*=col_footer] h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.footer_cont .container [class*=col_footer] a {
+  color: #848D9B;
+}
+
+.footer_cont .container [class*=col_footer] ul {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.footer_cont .container [class*=col_footer] ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer_cont .container .frs_col_footer {
+  width: 370px;
+  margin-right: 70px;
+}
+
+.footer_cont .container .trd_col_footer {
+  margin-left: auto;
+}
+

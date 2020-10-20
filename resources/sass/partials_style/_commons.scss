@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font_page;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.d_flex {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

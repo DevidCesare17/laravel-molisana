@@ -1,0 +1,36 @@
+.main_cont {
+  margin-top: 20px;
+  background-image: url('/images/fondo-pag-speciali.jpg');
+  @include background_img;
+
+  & .container {
+    padding: 85px 0;
+
+    & h2 {
+      font-size: 40px;
+      color: $color_blue;
+      margin: 20px 0;
+    }
+
+    & .pasta_link_desc {
+
+      & .pasta_img_list {
+        flex-wrap: wrap;
+        width: 100%;
+
+        & li {
+          width: calc((100% / 3) - 10px);
+
+          & a img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        & li:not(:nth-child(3n+3)) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
