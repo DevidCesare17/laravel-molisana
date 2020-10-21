@@ -16,9 +16,33 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+
 Route::get('/products', function () {
-    return view('products');
+    $data = config('pasta');
+
+    $type_pst = [];
+
+    foreach ($data as $key => $products) {
+      $products['id'] = $key;
+      $type_pst[$products["tipo"]][] = $products;
+    }
+
+    return view('products', ['type_pst' => $type_pst]);
 })->name('products');
+
+
+Route::get('/products/show/{id}', function($id) {
+    if (config("pasta.$id") == null) {
+      abort(404);
+    }
+
+    $products = config("pasta.$id");
+
+    $prev_id = --$id;
+    $next_id = ++$id;
+
+    return view('desc_products', ['data' => $products, "next_id" => $next_id, "prev_id" => $prev_id]);
+})->where('id', '[0-9]+')->name('desc_products');
 
 Route::get('/news', function () {
     return view('news');

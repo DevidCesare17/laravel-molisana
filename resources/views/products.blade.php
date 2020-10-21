@@ -25,6 +25,7 @@
 @endsection
 
 @section('content_main')
+<div class="main_cont">
   <div class="container">
     <!-- pasta_lunga -->
     @if (!empty($pasta_lunga))
@@ -89,4 +90,5 @@
     @endif
     <!-- /pasta_cortissima -->
   </div>
+</div>
 @endsection

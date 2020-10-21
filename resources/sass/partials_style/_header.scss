@@ -15,6 +15,10 @@
       & li {
         display: inline;
 
+        &:active a {
+          background-color: #B3E5FC;
+        }
+
         & a {
           color: #000000;
           padding: 20px 10px;
