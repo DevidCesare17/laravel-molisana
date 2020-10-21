@@ -38,8 +38,8 @@ Route::get('/products/show/{id}', function($id) {
 
     $products = config("pasta.$id");
 
-    $prev_id = --$id;
-    $next_id = ++$id;
+    $prev_id = $id - 1;
+    $next_id = $id + 1;
 
     return view('desc_products', ['data' => $products, "next_id" => $next_id, "prev_id" => $prev_id]);
 })->where('id', '[0-9]+')->name('desc_products');
